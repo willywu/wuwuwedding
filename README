@@ -2,3 +2,13 @@ This is your new Play 2.0 application
 =====================================
 
 This file will be packaged with your application, when using `play dist`.
+
+Notes
+=====
+
+play debug run
+
+Eclipse -> Debug Configs -> Remote Java App -> Port 9999
+
+Scala Templates
+- http://www.playframework.com/documentation/2.0/ScalaTemplates
