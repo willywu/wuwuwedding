@@ -1,4 +1,4 @@
-@(title: String)(content: Html)
+@(title: String)(section: Int)(content: Html)
 
 <!DOCTYPE html>
 
@@ -52,7 +52,6 @@ html {
 </style>
 </head>
 <body id="body-1903-19031" class="body-1903">
-  @content
 
   <div id="page-box">
 
@@ -71,12 +70,12 @@ html {
             <div id="nav-box-image-top">&nbsp;</div>
             <div class="websiteNavTop"></div>
             <div id="navigation">
-              <a class="navText navTextColor navTextFontStyle navSelected" href="/">Welcome</a>
-              <a class="navText navTextColor navTextFontStyle " href="/story">Our Story</a>
-              <a class="navText navTextColor navTextFontStyle " href="/brideandgroom">Bride & Groom</a>
-              <a class="navText navTextColor navTextFontStyle " href="/registry">Registry</a>
-              <a class="navText navTextColor navTextFontStyle " href="/contact">Contact Us</a>
-              <a class="navText navTextColor navTextFontStyle " href="/guestbook">Guest Book</a>
+              <a class="navText navTextColor navTextFontStyle @if(section == 0) { navSelected }" href="/">Welcome</a>
+              <a class="navText navTextColor navTextFontStyle @if(section == 1) { navSelected }" href="/story">Our Story</a>
+              <a class="navText navTextColor navTextFontStyle @if(section == 2) { navSelected }" href="/brideandgroom">Bride & Groom</a>
+              <a class="navText navTextColor navTextFontStyle @if(section == 3) { navSelected }" href="/registry">Registry</a>
+              <a class="navText navTextColor navTextFontStyle @if(section == 4) { navSelected }" href="/contact">Contact Us</a>
+              <a class="navText navTextColor navTextFontStyle @if(section == 5) { navSelected }" href="/guestbook">Guest Book</a>
             </div>
             <div class="websiteNavBottom"></div>
             <div id="nav-box-image-bottom">&nbsp;</div>
@@ -93,7 +92,7 @@ html {
               <p />
               <div id="pageContain">
                 <div id="contentText1" class="contentText contentTextColor contentTextFontStyle">
-                  <p>@content</p>
+                  @content
                 </div>
               </div>
             </div>
