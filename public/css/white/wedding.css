@@ -1,0 +1,477 @@
+html {
+    padding: 0;
+    margin: 0;
+    }
+
+body {
+  background: url("/assets/images/white/bottom_pic.jpg") no-repeat scroll center bottom transparent;
+    font-family: georgia;
+    padding-bottom: 317px;
+}
+
+a {
+    color: #F2797F;
+    text-decoration: underline;
+}
+
+a.registry_link {
+  text-decoration: none;
+  }
+
+p {
+    color: #8F8F8F;
+    line-height: 1.5;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 45px;
+    margin-right: 45px;
+}
+
+img.image_box1_content {
+  padding-top: 15px;
+  }
+
+#mask {
+   background: url("/assets/images/white/preloader.gif") no-repeat fixed center center transparent;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:white;
+    z-index:9999;
+}
+
+
+#header {
+    background: url("/assets/images/white/nav_shadow.png") repeat-x scroll center bottom transparent;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 158px;
+    width: 100%;
+  z-index: 999;
+  }
+
+
+#nav_bg {
+    background: url("/assets/images/white/nav.png") no-repeat scroll center bottom transparent;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 158px;
+    width: 100%;
+    z-index: 1000;
+    }
+
+#nav_item_wrapper {
+  width: 1000px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+#nav_aboutus {
+  background: url("/assets/images/white/nav-aboutus.png") no-repeat scroll left bottom transparent;
+    position: relative;
+    float: left;
+    cursor: pointer;
+    top: 0px;
+    height: 50px;
+    width: 98px;
+    z-index: 1100;
+  }
+
+#nav_proposal {
+  background: url("/assets/images/white/nav-proposal.png") no-repeat scroll left bottom transparent;
+    position: relative;
+    float: left;
+    cursor: pointer;
+    top: 0px;
+    height: 50px;
+    width: 134px;
+    z-index: 1100;
+  }
+
+#nav_photos {
+  background: url("/assets/images/white/nav-photos.png") no-repeat scroll left bottom transparent;
+    position: relative;
+    float: left;
+    cursor: pointer;
+    top: 0px;
+    height: 50px;
+    width: 85px;
+    z-index: 1100;
+  }
+
+#nav_guestbook {
+  background: url("/assets/images/white/nav-guestbook.png") no-repeat scroll left bottom transparent;
+    position: relative;
+    float: right;
+    cursor: pointer;
+    top: 0px;
+    height: 50px;
+    width: 110px;
+    z-index: 1100;
+  }
+
+#nav_registry {
+  background: url("/assets/images/white/nav-registry.png") no-repeat scroll left bottom transparent;
+    position: relative;
+    float: right;
+    cursor: pointer;
+    top: 0px;
+    height: 50px;
+    width: 96px;
+    z-index: 1100;
+  }
+
+#nav_thewedding {
+  background: url("/assets/images/white/nav-thewedding.png") no-repeat scroll left bottom transparent;
+    position: relative;
+    float: right;
+    cursor: pointer;
+    top: 0px;
+    height: 50px;
+    width: 112px;
+    z-index: 1100;
+  }
+
+#gridwidth {
+  margin-top: 67px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1000px;
+  }
+
+#lead-photo {
+  height: 664px;
+  width: 1000px;
+  }
+
+#about-us-title {
+  background: url("/assets/images/white/aboutus_title.png") no-repeat scroll center bottom transparent;
+  width: 212px;
+  height: 68px;
+  margin-top: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+#about-us-box-top {
+  background: url("/assets/images/white/bg-box2-top.png") no-repeat scroll center bottom transparent;
+  width: 687px;
+  height: 48px;
+  margin-top: 18px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+#about-us-box-middle {
+  background: url("/assets/images/white/bg-box2-middle.png") repeat-y scroll center bottom transparent;
+  width: 687px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  }
+
+#about-us-box-bottom {
+  background: url("/assets/images/white/bg-box2-bottom.png") no-repeat scroll center bottom transparent;
+  width: 731px;
+  height: 114px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+#from-us-wrapper {
+  width: 930px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: auto;
+  }
+
+#from-ash-wrapper {
+  width: 460px;
+  float: left;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+#from-ash-title {
+  background: url("/assets/images/white/fromashley.png") no-repeat scroll center bottom transparent;
+  width: 399px;
+  height: 165px;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+#from-ash-text {
+  width: 399px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 13px;
+  }
+
+#from-jeremy-wrapper {
+  width: 460px;
+  float: right;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+#from-jeremy-title {
+  background: url("/assets/images/white/fromjeremy.png") no-repeat scroll center bottom transparent;
+  width: 399px;
+  height: 165px;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+#from-jeremy-text {
+  width: 399px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 13px;
+  }
+
+#proposal-title {
+  background: url("/assets/images/white/theproposal_title.png") no-repeat scroll center bottom transparent;
+  width: 338px;
+  height: 125px;
+  margin-top: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+#proposal-wrapper {
+  width: 1000px;
+  height: 2767px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+
+#photos-title {
+  background: url("/assets/images/white/photos_title.png") no-repeat scroll center bottom transparent;
+  width: 151px;
+  height: 68px;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+
+#photos-wrapper {
+  width: 957px;
+  height: 567px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+#photos-leftarrow {
+  background: url("/assets/images/white/icon-arrow-left.png") no-repeat scroll center center transparent;
+  width: 24px;
+  height: 567px;
+    cursor: pointer;
+  float: left;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  }
+
+#photos-slideshow {
+  background: url("/assets/images/white/bg-photo-frame.png") no-repeat scroll center bottom transparent;
+  width: 909px;
+  height: 567px;
+  float:left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#photos-thephoto {
+  position: relative;
+  width: 853px;
+  height: 505px;
+}
+
+#photos-thephoto img {
+  position: absolute;
+  top: 28px;
+  left: 30px;
+}
+
+#photos-rightarrow {
+  background: url("/assets/images/white/icon-arrow-right.png") no-repeat scroll center center transparent;
+  width: 24px;
+  height: 567px;
+    cursor: pointer;
+  float: right;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  }
+
+#photos-text {
+  width: 687px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 13px;
+  }
+
+
+#the-wedding-title {
+  background: url("/assets/images/white/thewedding_title.png") no-repeat scroll center bottom transparent;
+  width: 371px;
+  height: 161px;
+  margin-top: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+
+#ceremony-box-top {
+  background: url("/assets/images/white/bg-box1-top-ceremony.png") no-repeat scroll center bottom transparent;
+  width: 739px;
+  height: 117px;
+  margin-top: 18px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+#reception-box-top {
+  background: url("/assets/images/white/bg-box1-top-reception.png") no-repeat scroll center bottom transparent;
+  width: 739px;
+  height: 117px;
+  margin-top: 18px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+#hotels-box-top {
+  background: url("/assets/images/white/bg-box1-top-hotels.png") no-repeat scroll center bottom transparent;
+  width: 739px;
+  height: 117px;
+  margin-top: 18px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+#box1-middle {
+  background: url("/assets/images/white/bg-box1-middle.png") repeat-y scroll center bottom transparent;
+  width: 687px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  }
+
+#box1-bottom {
+  background: url("/assets/images/white/bg-box1-bottom.png") no-repeat scroll center bottom transparent;
+  width: 731px;
+  height: 86px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+
+#weddingparty-wrapper {
+  width: 930px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: auto;
+  }
+
+#bm-wrapper {
+  width: 465px;
+  float: left;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 13px;
+  }
+
+#bm-title {
+  background: url("/assets/images/white/bridesmaids.png") no-repeat scroll center bottom transparent;
+  width: 398px;
+  height: 170px;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+#gm-wrapper {
+  width: 465px;
+  float: right;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 13px;
+  }
+
+#gm-title {
+  background: url("/assets/images/white/groomsmen.png") no-repeat scroll center bottom transparent;
+  width: 397px;
+  height: 170px;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+#gm-people {
+  width: 399px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 13px;
+  }
+
+#registry-title {
+  background: url("/assets/images/white/registry_title.png") no-repeat scroll center bottom transparent;
+  width: 207px;
+  height: 99px;
+  margin-top: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+#guestbook-title {
+  background: url("/assets/images/white/guestbook_title.png") no-repeat scroll center bottom transparent;
+  width: 338px;
+  height: 125px;
+  margin-top: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+  }

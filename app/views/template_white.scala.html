@@ -1,0 +1,315 @@
+@(title: String)(section: Int)(content: Html)
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>@title</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("css/white/wedding.css")">
+        <link rel="shortcut icon" href="@routes.Assets.at("favicon.ico")">
+        <!-- <script type="text/javascript" async="" src="@routes.Assets.at("js/white/ga.js")"></script> -->
+        <script src="@routes.Assets.at("js/white/jquery.min.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("js/white/jquery.easing.1.3.js")" type="text/javascript"></script>
+        <script>
+      $(function(){
+        $('.fadein img:gt(0)').hide();
+        $('#photos-leftarrow').click(function(){
+          $('.fadein :first-child').fadeOut();
+          $('.fadein :last-child').fadeIn();
+          $('.fadein :last-child').prependTo('.fadein');
+          });
+        $('#photos-rightarrow').click(function(){$('.fadein :first-child').fadeOut()
+          .next('img').fadeIn()
+          .end().appendTo('.fadein');
+          });
+      });
+    </script>
+    <script>
+      function goToByScroll(id){
+        $('html,body').stop().animate({scrollTop: ($("#"+id).offset().top)-=150},{duration: 1500, easing: "easeInOutExpo"});
+      }
+    </script>
+    <script>
+      $(window).load(function () {
+          $('#mask').fadeOut('slow');
+      });
+    </script>
+    </head>
+    <body>
+      <div id="mask">
+      </div>
+      <div id="header">
+        <div id="nav_bg">
+        </div>
+        <div id="nav_item_wrapper">
+        <div id="nav_aboutus" onclick="goToByScroll(&#39;about-us-title&#39;);">
+        </div>
+          <div id="nav_proposal" onclick="goToByScroll(&#39;proposal-title&#39;);">
+          </div>
+          <div id="nav_photos" onclick="goToByScroll(&#39;photos-title&#39;);">
+          </div>
+          <div id="nav_guestbook" onclick="goToByScroll(&#39;guestbook-title&#39;);">
+          </div>
+          <div id="nav_registry" onclick="goToByScroll(&#39;registry-title&#39;);">
+        </div>
+          <div id="nav_thewedding" onclick="goToByScroll(&#39;the-wedding-title&#39;);">
+          </div>
+        </div>
+      </div>
+      <div id="gridwidth">
+        <div id="lead-photo">
+          <img src="@routes.Assets.at("/images/white/onblanket.jpg")" alt="onground" width="1000" height="665">
+        </div>
+        <div id="about-us-title">
+        </div>
+        <div id="about-us-box-top">
+        </div>
+        <div id="about-us-box-middle">
+          <p>If we had to tell you one thing about us... it would be that we're so thankful. Thankful that God brought us together. We're so excited to be getting married and most of all excited to share our lives with one another. Great things really started happening in our lives when backgrounds and talents brought us together to work on the same team at AOL. Jeremy was a product director, leading a team on AIM, while Ashley was a designer. One day we were assigned to take the train up to NYC to work a booth for internet week.  As soon as we sat next to each other on the train, there was an instant connection (internet pun intended). It sounds cliche to say, but from the very first time we spoke, we could both tell that there was something special between us.</p>
+          <br>
+        <p>We continued to work on the same team for a handful of months, during which time we became close friends. It was inevitable; we couldn't stay friends for very long ó we started dating at the beginning of 2011 and have been having a blast together ever since! Together, we bring out each others' best parts and inspire each other creatively, spiritually, and intellectually. We are truly blessed. We look forward to creating a lifetime of memories together, especially with you ó our family and friends! </p>
+        </div>
+        <div id="about-us-box-bottom">
+        </div>
+        <div id="from-us-wrapper">
+          <div id="from-ash-wrapper">
+            <div id="from-ash-title">
+            </div>
+            <div id="from-ash-text">
+              <p>When I think about Jeremy it makes me want to cry in the best way possible ó I mean, I prayed for him my whole life and now here he is! Someone once told me that "when you meet the right person, you'll know." Well, I just knew. Right away, we connected on values, life outlook, and faith in a way that left me feeling complete and whole.</p>
+              <br>
+              <p>I am just crazy about Jeremy. He has a truly amazing heart ó one that puts God, family, and people first. Something that I noticed immediately about Jeremy is how genuine and balanced he is about everything. Jeremy is incredibly gifted and never ceases to amaze me. He is a rare mix of engineer and creative, which means he has all kinds of awesome hobbies, talents, and knowledge. Also, Jeremy is a blast! He is always up for anything, whether it's painting a picture together, dancing all night, or taking a ride on the ferris wheel when no one else is on it. I just never knew you could meet <i>the one</i> ó someone who makes you even more of who you are. Someone who makes life what it's supposed to be. I am so incredibly blessed and excited to spend everyday for the rest of my life with my best friend!</p>
+            </div>
+          </div>
+          <div id="from-jeremy-wrapper">
+            <div id="from-jeremy-title">
+            </div>
+            <div id="from-jeremy-text">
+                <p>Ashley is amazing.  When I first met her I knew she was amazing and every passing day reminds me of just how amazing she is!  What really blows me away is her incredibly unique blend of talents, interests, and personality.  She's a talented artist, always excited about trying new things, and a genuinely loving person.  Ashley can be doing anything from leading a design project to playing with her niece and she has the same happy, welcoming demeanor that makes her a joy to be around.</p>
+                <br>
+                <p>In life you interact with a lot of different people, but only once in a lifetime do you find someone who is your perfect match.  Ashley is perfect for me.  She's everything I've always dreamed of and I'm so excited to spend the rest of my life with her!</p>
+            </div>
+          </div>
+        </div>
+        <div id="proposal-title">
+        </div>
+        <div id="proposal-wrapper">
+          <img src="@routes.Assets.at("/images/white/proposal_timeline.jpg")" alt="proposal_timeline" width="1000" height="2638">
+        </div>
+        <div id="photos-title">
+        </div>
+        <div id="photos-wrapper">
+          <div id="photos-leftarrow">
+          </div>
+          <div id="photos-slideshow">
+            <div id="photos-thephoto" class="fadein">
+              <img src="@routes.Assets.at("/images/white/photo1.jpg")" alt="photo1" width="853" height="505">
+              <img src="@routes.Assets.at("/images/white/photo2.jpg")" alt="photo2" width="853" height="505" style="display: none;">
+              <img src="@routes.Assets.at("/images/white/photo3.jpg")" alt="photo3" width="853" height="505" style="display: none;">
+              <img src="@routes.Assets.at("/images/white/photo4.jpg")" alt="photo4" width="853" height="505" style="display: none;">
+              <img src="@routes.Assets.at("/images/white/photo5.jpg")" alt="photo5" width="853" height="505" style="display: none;">
+              <img src="@routes.Assets.at("/images/white/photo6.jpg")" alt="photo6" width="853" height="505" style="display: none;">
+              <img src="@routes.Assets.at("/images/white/photo7.jpg")" alt="photo7" width="853" height="505" style="display: none;">
+              <img src="@routes.Assets.at("/images/white/photo8.jpg")" alt="photo8" width="853" height="505" style="display: none;">
+              <img src="@routes.Assets.at("/images/white/photo9.jpg")" alt="photo9" width="853" height="505" style="display: none;">
+              <img src="@routes.Assets.at("/images/white/photo10.jpg")" alt="photo10" width="853" height="505" style="display: none;">
+              <img src="@routes.Assets.at("/images/white/photo11.jpg")" alt="photo11" width="853" height="505" style="display: none;">
+              <img src="@routes.Assets.at("/images/white/photo12.jpg")" alt="photo12" width="853" height="505" style="display: none;">
+              <img src="@routes.Assets.at("/images/white/photo13.jpg")" alt="photo13" width="853" height="505" style="display: none;">
+            </div>
+          </div>
+          <div id="photos-rightarrow">
+          </div>
+        </div>
+        <div id="photos-text">
+          <p>Photos by <a href="http://www.samhurdphotography.com/" target="_blank">Sam Hurd Photography</a><br>
+          You can also find some snapshots of our day-to-day life on <a href="http://instagram.com/ashleygilmore" target="_blank">Ashley's Instagram</a> and <a href="http://instagram.com/rephlo" target="_blank">Jeremy's Instagram</a></p>
+        </div>
+        <div id="the-wedding-title">
+        </div>
+        <div id="ceremony-box-top">
+        </div>
+        <div id="box1-middle">
+          <img src="@routes.Assets.at("/images/white/stpatricks_picture.jpg")" alt="stpatricks_picture" width="595" height="234">
+          <img src="@routes.Assets.at("/images/white/thewedding_stpatricks.png")" alt="thewedding_stpatricks" width="657" height="72" class="image_box1_content">
+          <p><b>619 10th Street NW, Washington, DC</b></p>
+          <p>The church where the wedding ceremony will take place on April 6th is St. Patrick's Church, where you'll find us most Sunday mornings.  It's the oldest parish in the Federal City of Washington, D.C, established in 1794 to minister to the needs of the stonemasons building the White House and the U.S. Capitol. The first American to be ordained a priest in the United States, Fr. William Matthews, was named pastor in 1804. In addition to its beauty and amazing history, there is a wonderful choir and even more wonderful Pastor ó Monsignor Sal, who will be marrying us.</p>
+          <br>
+          <p><a href="http://www.saintpatrickdc.org/" target="_blank">view website &gt;&gt;</a></p>
+        </div>
+        <div id="box1-bottom">
+        </div>
+        <div id="reception-box-top">
+        </div>
+        <div id="box1-middle">
+          <img src="@routes.Assets.at("/images/white/mayflower_picture.jpg")" alt="mayflower_picture" width="595" height="234">
+          <img src="@routes.Assets.at("/images/white/thewedding_mayflower.png")" alt="thewedding_mayflower" width="657" height="93" class="image_box1_content">
+          <p><b>1127 Connecticut Avenue NW, Washington, DC</b></p>
+          <p>We fell in love with the ballroom inside this historic hotel for its grandeur and timeless elegance. Upon opening in 1925, it was said to have more gold leaf than any other US building except the Library of Congress, and has earned a place on the list of the National Register of Historic Places.  Both glamorous and historical ó nice!</p>
+        <br>
+        <p>Ok, some more reasons it's cool... it was designed by Warren and Westmore, the New York architects who also worked on Manhattan's Grand Central Station. The hotel is centrally located in the heart of DC's bustling Dupont Circle neighborhood, near lots of great shops, restaurants, and attractions. It's also four blocks from the White House and only a few metro stops away from all the monuments and museums, making it a great base for sightseeing.</p>
+        <br>
+        <p>We can't wait to party the night away with you!</p>
+        <br>
+        <p><a href="http://www.marriott.com/hotels/hotel-information/travel/wassh-the-mayflower-renaissance-washington-dc-hotel/" target="_blank">view website &gt;&gt;</a></p>
+        </div>
+        <div id="box1-bottom">
+        </div>
+        <div id="hotels-box-top">
+        </div>
+        <div id="box1-middle">
+        <br>
+                <p>First things first - how to get to the church! It's at 10th and G, Northwest.</p>
+                <br>
+                <p><b>From the Mayflower</b>, we plan on having a shuttle to take you from the hotel to the church and back.</p>
+                <br>
+                <p><b>From Arlington or DC</b>, the easiest way is to get a cab and tell the cabbie to take you to the church at 10th and G Northwest. Another option is to take the Metro Red Line to Metro Center and walk a block.</p>
+                <br>
+                <p><b>For those driving</b>, the address is <a href="http://maps.google.com/maps?q=619+10th+Street+Northwest,+Washington,+DC&hl=en&ll=38.898164,-77.025597&spn=0.009569,0.018218&sll=38.898113,-77.025965&sspn=0.001204,0.002277&gl=us&hnear=619+10th+St+NW,+Washington,+District+of+Columbia+20004&t=m&z=16" target="_blank">619 10th Street NW, Washington, DC</a>.  We plan to have the garage next to the church on 10th street open that day. If you show your wedding invitation you'll be able to park for free in that garage.</p>
+        <br>
+        <img src="@routes.Assets.at("/images/white/hotel_accomodations.png")" alt="hotel_accomodations" width="350" height="79">
+        <br>
+        <img src="@routes.Assets.at("/images/white/mayflower_title.png")" alt="mayflower_title" width="182" height="30">
+        <p>For out of town guests, we've got a couple of hotel options.  The first is the The Mayflower, where the reception will be held. It's an awesome spot to be in the city and we highly recommend it.  Until March 8th, they are holding a limited number of rooms for us at $189(+tax) per night.  There is a conference in the city that is increasing demand for rooms on the weekend of our wedding, so we recommend grabbing a room early. The address for the Mayflower is <a href="http://maps.google.com/maps?q=+1127+Connecticut+Avenue+Northwest,+Washington,+DC+&hl=en&ll=38.90496,-77.040124&spn=0.009568,0.018218&sll=38.909202,-77.040167&sspn=0.019135,0.036435&gl=us&hnear=1127+Connecticut+Ave+NW,+Washington,+District+of+Columbia+20036&t=m&z=16&iwloc=A" target="_blank">1127 Connecticut Avenue NW, Washington, DC</a></p>
+        <br>
+        <p>For the discounted rate, please reserve through <a href="https://resweb.passkey.com/Resweb.do?mode=welcome_ei_new&eventID=10220216" target="_blank">this special link</a>.</p>
+        <br>
+        <img src="@routes.Assets.at("/images/white/arlington_courthouse.png")" alt="arlington_courthouse" width="303" height="28">
+        <p>We know that The Mayflower (and downtown DC in general) isn't cheap, so we've arranged for a lower rate at a hotel right across the river from DC in Arlington, VA.  The Arlington Courthouse suites are $119(+tax) per night and located a few blocks from the Courthouse metro stop in a nice area of Arlington, VA.  They also have two and three bedroom suites for $199 and $299. The church and the reception will be an easy cab ride away and all the sightseeing is metro accessible.  It's a great lower priced option located at <a href="http://maps.google.com/maps?q=+1200+North+Courthouse+Road,+Arlington,+VA+&hl=en&ll=38.887726,-77.084155&spn=0.009971,0.018218&sll=38.889363,-77.084026&sspn=0.009971,0.018218&gl=us&hnear=1200+N+Courthouse+Rd,+Arlington,+Virginia+22201&t=m&z=16&iwloc=A" target="_blank">1200 North Courthouse Rd, Arlington, VA</a></p>
+        <br>
+        <p>For the discounted rate, you can call the hotel at 703.524.40000 extension 0, refer to the "Rephlo Wedding Block" and make sure you give your credit card number to guarantee your arrival. The $119 rate is available until March 22nd.</p>
+        </div>
+        <div id="box1-bottom">
+        </div>
+        <div id="weddingparty-wrapper">
+          <div id="bm-wrapper">
+            <div id="bm-title">
+            </div>
+          </div>
+          <div id="gm-wrapper">
+            <div id="gm-title">
+            </div>
+          </div>
+        </div>
+        <div id="weddingparty-wrapper">
+          <div id="bm-wrapper">
+          <img src="@routes.Assets.at("/images/white/bm1.jpg")" alt="bm1" width="93" height="93">
+          <br> <br>
+          <p><b>Heather Graves, Matron of Honor</b></p>
+          <p>My older sister, Heather, is very close to me and has been a major influence my entire life. I have always looked up to her and wouldn't be the same person I am today without her. She is one of the strongest, as well as one of the most loving, people I've been privileged to know. She is tons of fun and soo sweet, in addition to being a wonderful mother, wife, business woman, and friend.</p>
+          </div>
+          <div id="gm-wrapper">
+          <img src="@routes.Assets.at("/images/white/gm1.jpg")" alt="bm1" width="93" height="93">
+          <br> <br>
+          <p><b>Will Pettit, Best Man</b></p>
+          <p>Will is an awesome friend. We met in seventh grade and were immediately absolutely ridiculous. We made up words (Will's specialty), annoyed the teachers (in a nice way), and were basically normal thirteen year old boys.  Eventually, we grew up.  While we are still sometimes ridiculous, Will's been there for me in countless non-ridiculous ways.</p>
+          </div>
+        </div>
+      <div id="weddingparty-wrapper">
+          <div id="bm-wrapper">
+              <img src="@routes.Assets.at("/images/white/bm2.jpg")" alt="bm1" width="93" height="93">
+            <br> <br>
+            <p><b>Melissa Gilmore</b></p>
+            <p>Melissa is my younger sister and first friend. I also wouldn't be the same person I am today without her. She always knows how to make me laugh and is always free to share her thoughts and advice on things. We have always been very close and am I so lucky to have a sister who is so fun, bubbly, and sweet. Recently, she has been working very hard to become a nurse. I am so blessed to have her in my life.</p>
+          </div>
+          <div id="gm-wrapper">
+          <img src="@routes.Assets.at("/images/white/gm2.jpg")" alt="bm1" width="93" height="93">
+          <br> <br>
+          <p><b>Jordan Gladwin</b></p>
+          <p>Jordan and I became friends in college.  After college, we got into mountain biking together and could often be found biking or just chatting while taking a rest from biking. If we weren't riding, we were probably getting excited about some stereo equipment. He's a great guy to be around.  Being the super solid family man that he is, he always has his son sporting some awesome kicks and pointing out cool cars as they pass.</p>
+          </div>
+      </div>
+      <div id="weddingparty-wrapper">
+          <div id="bm-wrapper">
+              <img src="@routes.Assets.at("/images/white/bm3.jpg")" alt="bm1" width="93" height="93">
+          <br> <br>
+          <p><b>Mandie Thomas</b></p>
+          <p>I can't even tell you how much Mandie has shown me what it means to be a good friend. It's rare that you find someone in life who really puts friends first and wears their heart on their sleeve. She has been there for me countless times at the drop of a hat when I needed her.  Mandie and I met at University of Maryland my freshman year in art class. I could tell immediately how understanding and down-to-earth she was. We love to geek out together about art history and design.</p>
+          </div>
+          <div id="gm-wrapper">
+          <img src="@routes.Assets.at("/images/white/gm3.jpg")" alt="bm1" width="93" height="93">
+          <br> <br>
+          <p><b>Chris Williams</b></p>
+          <p>Chris, aka CDub, is the life of the party. Always ready to "do it up" ó he's a blast to hang out with. You'll often find me having a rap battle with him late night.  Ever since I moved to Arlington five years ago, he's one of the guys in the Arlington crew I spend a ton of time with.</p>
+          </div>
+      </div>
+      <div id="weddingparty-wrapper">
+          <div id="bm-wrapper">
+          <img src="@routes.Assets.at("/images/white/bm4.jpg")" alt="bm1" width="93" height="93">
+          <br> <br>
+          <p><b>Alisa March</b></p>
+          <p>Alisa is an extremely talented designer and a great friend. Alisa and I met at AOL when we were both designers on the AIM team, which is fitting since we still chat with each other on AIM everyday nonstop! I know that I can always count on Alisa for honest advice, a good laugh, and great fashion finds (especially lots of fun links to Louboutin shoes).</p>
+          </div>
+          <div id="gm-wrapper">
+          <img src="@routes.Assets.at("/images/white/gm4.jpg")" alt="bm1" width="93" height="93">
+          <br> <br>
+          <p><b>Rob Fox</b></p>
+          <p>Another member of the Arlington crew, I love talking with Rob about random stuff because he is super freakin smart and an all around interesting guy. He's really solid, genuine, and has perfected the art of throwing a BBQ.</p>
+          </div>
+      </div>
+      <div id="weddingparty-wrapper">
+          <div id="bm-wrapper">
+          <img src="@routes.Assets.at("/images/white/bm5.jpg")" alt="bm1" width="93" height="93">
+          <br> <br>
+          <p><b>Emma Black</b></p>
+          <p>Do they still have roller skating rinks anymore?? Emma and I met at one when we were about 14 years old.  As soon as I met her, I knew that we would become good friends ó she was all about fashion, art, country music, and making things. We've spent hours and hours talking on the phone about everything that teenagers like to gab about, not to mention all our weekends at the mall and day trips to the beach. She is an amazing singer, artist, and mom of the cutest little boy.</p>
+          </div>
+          <div id="gm-wrapper">
+          <img src="@routes.Assets.at("/images/white/gm5.jpg")" alt="bm1" width="93" height="93">
+          <br> <br>
+          <p><b>Justin Ison</b></p>
+          <p>Justin is the master of getting his backyard firepit to have flames shooting higher than his house.  Always a super chill guy, it almost makes your blood pressure go down just hanging with him.  He's another of the Arlington crew.  We roll deep.</p>
+          </div>
+      </div>
+      <div id="weddingparty-wrapper">
+          <div id="bm-wrapper">
+          <img src="@routes.Assets.at("/images/white/bm6.jpg")" alt="bm1" width="93" height="93">
+          <br> <br>
+          <p><b>Christine Lee</b></p>
+          <p>Christine and I go waay back... like friends since we were 9 years old back! She is my brother-in-law's sister, so anytime my sister, Heather and her future husband would come over, so would Christine! This always meant we would listen to lots of Nsync and Backstreet Boys together. She is a great friend, extremely down-to-earth, and one of the sweetest people I know.</p>
+          </div>
+          <div id="gm-wrapper">
+          <img src="@routes.Assets.at("/images/white/gm6.jpg")" alt="bm1" width="93" height="93">
+          <br> <br>
+          <p><b>Chris Schreiner</b></p>
+          <p>Schreiner can beat anyone in cornhole.  Don't try to challenge him.  If he lets you take the lead he is hustling you.</p>
+          <br>
+          <p>But seriously, he's a hilarious guy.  Whether it's rooming together on ski trips or just chilling at a bar with the rest of the Arlington guys, Schreiner is always fun to be around.</p>
+          </div>
+      </div>
+      <div id="weddingparty-wrapper">
+          <div id="bm-wrapper">
+          <img src="@routes.Assets.at("/images/white/bm7.jpg")" alt="bm1" width="93" height="93">
+          <br> <br>
+          <p><b>Kassi Absar</b></p>
+          <p>Kassi and I met freshman year in art theory class. A deep friendship began when one day we partnered up on a class project and took the metro down to the art gallery, missed our stop because we couldn't stop talking to each other, and ended up going to the mall instead! Kassi is tons of fun, super smart, and an adventurous chick. We spent lots of time in college cooking and painting together. Unfortunately, Kassi won't be able to be in our wedding, since she is teaching in Bangledesh this year, but will certainly be there in spirit!</p>
+          </div>
+          <div id="gm-wrapper">
+          </div>
+      </div>
+        <div id="registry-title">
+        </div>
+        <div id="about-us-box-top">
+        </div>
+        <div id="about-us-box-middle">
+          <a href="http://www.williams-sonoma.com/registry/3030973/registry-list.html" target="_blank" class="registry_link"><img src="@routes.Assets.at("/images/white/williams-sonoma.png")" alt="williams-sonoma" width="595" height="115"></a>
+          <a href="http://www.amazon.com/gp/registry/registry.html?ie=UTF8&id=2D09HMHIA03XV&type=wedding" target="_blank" class="registry_link"><img src="@routes.Assets.at("/images/white/amazon-com.png")" alt="amazon.com" width="595" height="115"></a>
+          <a href="http://www.restorationhardware.com/gift-registry/gift-list.jsp?giftlistId=gl515156132" target="_blank" class="registry_link"><img src="@routes.Assets.at("/images/white/restorationhardware.png")" alt="restoration hardware" width="595" height="115"></a>
+          <a href="http://www.crateandbarrel.com/Gift-Registry/Guest/View-Registry.aspx?grid=4942145" target="_blank" class="registry_link"><img src="@routes.Assets.at("/images/white/crateandbarrel.png")" alt="crate and barrel" width="595" height="115"></a>
+          <br><br><br>
+          <p>We went out and registered for a bunch of awesome things. Shopping for stuff! Playing with kitchen goodies! Bar code scanners! Feeling silky smooth sheets! It was a ton of fun.</p>
+          <br>
+          <p>Everything we put on the registries are things we'll love and would spruce up the house quite a lot, but honestly, the most important gift you can bring us is having you and your dancing shoes at our celebration. We are pumped to spend our special day with you and feel very blessed to have you in our lives!</p>
+        </div>
+        </div>
+    <div id="about-us-box-bottom">
+        </div>
+
+
+
+</body>
+
+</html>
