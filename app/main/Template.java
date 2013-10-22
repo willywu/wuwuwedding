@@ -5,10 +5,11 @@ package main;
  */
 public enum Template {
     GRAY(),
-    WHITE();
+    WHITE(),
+    SOPHIE();
 
     /** Get the currently active template */
     public static Template get() {
-        return WHITE;
+        return SOPHIE;
     }
 }

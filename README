@@ -12,3 +12,5 @@ Eclipse -> Debug Configs -> Remote Java App -> Port 9999
 
 Scala Templates
 - http://www.playframework.com/documentation/2.0/ScalaTemplates
+
+If you add new views, generate the necessary dependencies w/ "play compile"
