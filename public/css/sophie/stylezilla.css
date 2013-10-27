@@ -1,6 +1,11 @@
-div.center {
-  text-align: center;
-}
 p.content {
   font-family:"sans-serif"
+}
+img.centered {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
