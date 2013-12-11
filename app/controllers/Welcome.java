@@ -8,6 +8,10 @@ import views.html.*;
 public class Welcome extends Controller {
 
     public static Result index() {
+        if (request().queryString().get("white") != null) {
+            return ok(welcome_white.render("Hello"));
+        }
+
         if (Template.get().equals(Template.GRAY)) {
             return ok(welcome.render("Hello"));
         } else if (Template.get().equals(Template.WHITE)) {
