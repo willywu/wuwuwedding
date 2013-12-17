@@ -12,9 +12,7 @@ public class Welcome extends Controller {
             return ok(welcome_white.render("Hello"));
         }
 
-        if (Template.get().equals(Template.GRAY)) {
-            return ok(welcome.render("Hello"));
-        } else if (Template.get().equals(Template.WHITE)) {
+        if (Template.get().equals(Template.WHITE)) {
             return ok(welcome_white.render("Hello"));
         } else if (Template.get().equals(Template.SOPHIE)) {
             return ok(welcome_sophie.render("Hello"));

@@ -4,7 +4,6 @@ package main;
  * List of different themes for the site
  */
 public enum Template {
-    GRAY(),
     WHITE(),
     SOPHIE();
 
