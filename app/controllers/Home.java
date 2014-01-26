@@ -14,8 +14,10 @@ public class Home extends Controller {
             return ok(template_bootstrap.render());
         } else if (qs.get("responsive") != null) {
             return ok(template_responsive.render());
-        } else {
+        } else if (qs.get("bigimage") != null){
             return ok(template_sophie2.render());
+        } else {
+            return ok(mainpage.render());
         }
     }
 

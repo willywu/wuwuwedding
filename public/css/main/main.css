@@ -1,0 +1,81 @@
+/*
+  1. Import fonts
+  2. Global style
+  3. Nav bar
+  4. Landing
+  5. About Us
+  6. The Ceremony
+  7. Photos
+*/
+
+/*
+  == Import fonts ==
+*/
+@import url(http://fonts.googleapis.com/css?family=Rokkitt);
+
+/*
+  == Global style ==
+*/
+body{
+  background: #fff;
+  margin: 0;
+  font-family: 'Rokkitt', serif;
+  font-size: 16px;
+}
+
+#gridwidth {
+  margin-top: 52px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1280px;
+}
+
+/*
+  == Nav bar ==
+*/
+#nav_bg {
+    background: url("/assets/images/main/wu-index_01_header.png") no-repeat scroll center bottom transparent;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 79px;
+    width: 100%;
+    z-index: 1000;
+}
+
+/*
+  == Landing ==
+*/
+#lead-photo {
+  height: 815px;
+  width: 1280px;
+}
+
+/*
+  == About Us ==
+*/
+#about-us-photo {
+  height: 1114px;
+  width: 1280px;
+}
+
+/*
+  == Ceremony ==
+*/
+#ceremony-photo {
+  height: 874px;
+  width: 1280px;
+}
+
+#ceremony-map-photo {
+  height: 978px;
+  width: 1280px;
+}
+
+/*
+  == Photos
+*/
+#photo-library-photo {
+  height: 686px;
+  width: 1280px;
+}
