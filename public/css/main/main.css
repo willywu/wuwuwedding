@@ -1,6 +1,6 @@
 /*
   1. Import fonts
-  2. Global style
+  2. Global
   3. Nav bar
   4. Landing
   5. About Us
@@ -14,7 +14,7 @@
 @import url(http://fonts.googleapis.com/css?family=Rokkitt);
 
 /*
-  == Global style ==
+  == Global ==
 */
 body{
   background: #fff;
@@ -27,7 +27,17 @@ body{
   margin-top: 52px;
   margin-left: auto;
   margin-right: auto;
-  width: 1280px;
+  width: 1000px;
+}
+
+#divider {
+  height: 42px;
+  background: url("/assets/images/main/00-divider.jpg") no-repeat scroll center bottom transparent;
+  background-size: 100% 100%;
+}
+
+div {
+  width: 100%;
 }
 
 /*
@@ -39,43 +49,100 @@ body{
     top: 0px;
     left: 0px;
     height: 79px;
-    width: 100%;
     z-index: 1000;
+    width: 100%
+}
+
+#nav_aboutus {
+    position: relative;
+    float: left;
+    cursor: pointer;
+    top: 0px;
+    height: 50px;
+    width: 198px;
+    z-index: 1100;
+    clear: both;
+}
+
+#nav_ceremony {
+    position: relative;
+    float: left;
+    cursor: pointer;
+    top: 0px;
+    height: 50px;
+    width: 198px;
+    z-index: 1100;
+}
+
+#nav_map {
+    position: relative;
+    float: right;
+    cursor: pointer;
+    top: 0px;
+    height: 50px;
+    width: 198px;
+    z-index: 1100;
+}
+
+#nav_photos {
+    position: relative;
+    float: right;
+    cursor: pointer;
+    top: 0px;
+    height: 50px;
+    width: 198px;
+    z-index: 1100;
 }
 
 /*
   == Landing ==
 */
-#lead-photo {
-  height: 815px;
-  width: 1280px;
+#landing {
+  position: relative;
+  height: 595px;
+  background: url("/assets/images/main/01-landing.jpg") no-repeat scroll center bottom transparent;
+  z-index: 50;
+  background-size: 100% 100%;
+}
+
+#landing-text {
+  position: absolute;
+  height: 150px;
+  background: url("/assets/images/main/01-landing_text.png") no-repeat scroll center bottom transparent;
+  z-index: 100;
+  margin: 0 auto;
+  vertical-align: middle;
+  top: 72%;
 }
 
 /*
   == About Us ==
 */
-#about-us-photo {
-  height: 1114px;
-  width: 1280px;
+#about-us {
+  height: 853px;
+  background: url("/assets/images/main/02-timeline.jpg") no-repeat scroll center bottom transparent;
+  background-size: 100% 100%;
 }
 
 /*
   == Ceremony ==
 */
-#ceremony-photo {
+#ceremony {
   height: 874px;
-  width: 1280px;
+  background: url("/assets/images/main/wu-index_04_ceremony.png") no-repeat scroll center bottom transparent;
+  background-size: 100% 100%;
 }
 
-#ceremony-map-photo {
+#ceremony-map {
   height: 978px;
-  width: 1280px;
+  background: url("/assets/images/main/wu-index_05_map.png") no-repeat scroll center bottom transparent;
+  background-size: 100% 100%;
 }
 
 /*
   == Photos
 */
-#photo-library-photo {
+#photo-library {
   height: 686px;
-  width: 1280px;
+  background: url("/assets/images/main/wu-index_06_photos.png") no-repeat scroll center bottom transparent;
 }
