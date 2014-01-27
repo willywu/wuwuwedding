@@ -43,14 +43,15 @@ div {
 /*
   == Nav bar ==
 */
-#nav_bg {
+#navbar {
     background: url("/assets/images/main/wu-index_01_header.png") no-repeat scroll center bottom transparent;
     position: fixed;
     top: 0px;
-    left: 0px;
     height: 79px;
     z-index: 1000;
-    width: 100%
+    background-size: 100% 100%;
+    width: 1000px;
+    margin: 0 auto;
 }
 
 #nav_aboutus {
@@ -59,7 +60,7 @@ div {
     cursor: pointer;
     top: 0px;
     height: 50px;
-    width: 198px;
+    width: 228px;
     z-index: 1100;
     clear: both;
 }
@@ -70,7 +71,7 @@ div {
     cursor: pointer;
     top: 0px;
     height: 50px;
-    width: 198px;
+    width: 160px;
     z-index: 1100;
 }
 
@@ -80,7 +81,7 @@ div {
     cursor: pointer;
     top: 0px;
     height: 50px;
-    width: 198px;
+    width: 160px;
     z-index: 1100;
 }
 
@@ -90,7 +91,17 @@ div {
     cursor: pointer;
     top: 0px;
     height: 50px;
-    width: 198px;
+    width: 228px;
+    z-index: 1100;
+}
+
+#nav_landing {
+    position: relative;
+    float: left;
+    cursor: pointer;
+    top: 0px;
+    height: 50px;
+    width: 224px;
     z-index: 1100;
 }
 
@@ -111,7 +122,6 @@ div {
   background: url("/assets/images/main/01-landing_text.png") no-repeat scroll center bottom transparent;
   z-index: 100;
   margin: 0 auto;
-  vertical-align: middle;
   top: 72%;
 }
 
@@ -128,13 +138,13 @@ div {
   == Ceremony ==
 */
 #ceremony {
-  height: 874px;
+  height: 683px;
   background: url("/assets/images/main/wu-index_04_ceremony.png") no-repeat scroll center bottom transparent;
   background-size: 100% 100%;
 }
 
 #ceremony-map {
-  height: 978px;
+  height: 764px;
   background: url("/assets/images/main/wu-index_05_map.png") no-repeat scroll center bottom transparent;
   background-size: 100% 100%;
 }
@@ -143,6 +153,7 @@ div {
   == Photos
 */
 #photo-library {
-  height: 686px;
+  height: 536px;
   background: url("/assets/images/main/wu-index_06_photos.png") no-repeat scroll center bottom transparent;
+  background-size: 100% 100%;
 }
