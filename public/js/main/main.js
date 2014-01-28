@@ -3,8 +3,8 @@ function goToByScroll(id){
 }
 function initialize() {
     var mapOptions = {
-      zoom: 13,
-      center: new google.maps.LatLng(37.7792, -122.4191),
+      zoom: 16,
+      center: new google.maps.LatLng(37.7792, -122.419),
       zoomControl: true,
       mapTypeControl: false
     };
