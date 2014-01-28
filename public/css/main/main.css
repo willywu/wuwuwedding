@@ -19,9 +19,16 @@
 /*
   == Global ==
 */
+
+html {
+  height: 100%;
+}
+
 body{
+  height: 100%;
   background: #fff;
   margin: 0;
+  padding: 0;
   font-family: 'Rokkitt', serif;
   font-size: 16px;
 }
@@ -205,6 +212,19 @@ div {
   z-index: 100;
   margin: 0 auto;
   top: 92%
+}
+
+#map-container {
+  position: absolute;
+  top: 190px;
+  height: 600px;
+  width: 1200px;
+  left: -100px;
+}
+
+#map-canvas {
+  height: 100%;
+  width: 100%;
 }
 
 /*
