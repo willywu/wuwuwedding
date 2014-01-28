@@ -4,8 +4,11 @@
   3. Nav bar
   4. Landing
   5. About Us
-  6. The Ceremony
-  7. Photos
+  6. Wedding Party
+  7. The Ceremony
+  8. RSVP
+  9. Photos
+  10. Contact Us
 */
 
 /*
@@ -118,11 +121,11 @@ div {
 
 #landing-text {
   position: absolute;
-  height: 150px;
+  height: 90px;
   background: url("/assets/images/main/01-landing_text.png") no-repeat scroll center bottom transparent;
   z-index: 100;
   margin: 0 auto;
-  top: 72%;
+  top: 80%;
 }
 
 /*
@@ -135,19 +138,79 @@ div {
 }
 
 /*
-  == Ceremony ==
+  == Wedding party ==
 */
-#ceremony {
-  height: 683px;
-  background: url("/assets/images/main/wu-index_04_ceremony.png") no-repeat scroll center bottom transparent;
+#weddingparty-mainphoto {
+  position: relative;
+  z-index: 50;
+  height: 642px;
+  background: url("/assets/images/main/03-party.jpg") no-repeat scroll center bottom transparent;
   background-size: 100% 100%;
 }
 
-#ceremony-map {
-  height: 764px;
-  background: url("/assets/images/main/wu-index_05_map.png") no-repeat scroll center bottom transparent;
+#weddingparty-text {
+  position: absolute;
+  height: 90px;
+  background: url("/assets/images/main/03-party_text.png") no-repeat scroll center bottom transparent;
+  z-index: 100;
+  margin: 0 auto;
+  top: 80%;
+}
+
+#weddingparty-content {
+  height: 1243px;
+  background: url("/assets/images/main/03-party_content.jpg") no-repeat scroll center bottom transparent;
   background-size: 100% 100%;
 }
+
+/*
+  == Ceremony ==
+*/
+#ceremony-mainphoto {
+  position: relative;
+  z-index: 50;
+  height: 640px;
+  background: url("/assets/images/main/05-ceremony.jpg") no-repeat scroll center bottom transparent;
+  background-size: 100% 100%;
+}
+
+#ceremony-text {
+  position: absolute;
+  height: 127px;
+  background: url("/assets/images/main/05-ceremony_text.png") no-repeat scroll center bottom transparent;
+  z-index: 100;
+  margin: 0 auto;
+  top: 75%;
+}
+
+#ceremony-content {
+  position: relative;
+  height: 764px;
+  background: url("/assets/images/main/05-ceremony_BG.jpg") no-repeat scroll center bottom transparent;
+  background-size: 100% 100%;
+}
+
+#ticket-img {
+  position: absolute;
+  height: 185px;
+  background: url("/assets/images/main/05-ceremony_tickets.png") no-repeat scroll center bottom transparent;
+  z-index: 100;
+  margin: 0 auto;
+}
+
+#hearts-img {
+  position: absolute;
+  height: 34px;
+  background: url("/assets/images/main/05-ceremony_heart.png") no-repeat scroll center bottom transparent;
+  z-index: 100;
+  margin: 0 auto;
+  top: 92%
+}
+
+/*
+  == RSVP ==
+*/
+/* TODO */
 
 /*
   == Photos
@@ -157,3 +220,8 @@ div {
   background: url("/assets/images/main/wu-index_06_photos.png") no-repeat scroll center bottom transparent;
   background-size: 100% 100%;
 }
+
+/*
+  == Contact Us ==
+*/
+/* TODO */
