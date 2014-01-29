@@ -1,9 +1,9 @@
 function goToByScroll(id){
-    $('html,body').stop().animate({scrollTop: ($("#"+id).offset().top)-=50},{duration: 1500, easing: "easeInOutExpo"});
+    $('html,body').stop().animate({scrollTop: ($("#"+id).offset().top)-=42},{duration: 1500, easing: "easeInOutExpo"});
 }
 function initialize() {
     var mapOptions = {
-      zoom: 16,
+      zoom: 17,
       center: new google.maps.LatLng(37.7792, -122.419),
       zoomControl: true,
       mapTypeControl: false

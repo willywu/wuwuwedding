@@ -34,7 +34,7 @@ body{
 }
 
 #gridwidth {
-  margin-top: 52px;
+  margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
   width: 1000px;
@@ -54,14 +54,23 @@ div {
   == Nav bar ==
 */
 #navbar {
-    background: url("/assets/images/main/wu-index_01_header.png") no-repeat scroll center bottom transparent;
+    background: url("/assets/images/main/01-header.png") no-repeat scroll center bottom transparent;
     position: fixed;
     top: 0px;
-    height: 79px;
+    height: 60px;
     z-index: 1000;
     background-size: 100% 100%;
     width: 1000px;
     margin: 0 auto;
+}
+
+#navbarsides {
+    background: url("/assets/images/main/00-header_slice.png") repeat-x transparent;
+    position: fixed;
+    top: 0px;
+    height: 60px;
+    z-index: 900;
+    width: 100%;
 }
 
 #nav_aboutus {
@@ -70,9 +79,18 @@ div {
     cursor: pointer;
     top: 0px;
     height: 50px;
-    width: 228px;
+    width: 112px;
     z-index: 1100;
-    clear: both;
+}
+
+#nav_weddingparty {
+    position: relative;
+    float: left;
+    cursor: pointer;
+    top: 0px;
+    height: 50px;
+    width: 152px;
+    z-index: 1100;
 }
 
 #nav_ceremony {
@@ -81,37 +99,47 @@ div {
     cursor: pointer;
     top: 0px;
     height: 50px;
-    width: 160px;
+    width: 120px;
     z-index: 1100;
 }
 
-#nav_map {
-    position: relative;
-    float: right;
-    cursor: pointer;
-    top: 0px;
-    height: 50px;
-    width: 160px;
-    z-index: 1100;
-}
-
-#nav_photos {
-    position: relative;
-    float: right;
-    cursor: pointer;
-    top: 0px;
-    height: 50px;
-    width: 228px;
-    z-index: 1100;
-}
-
-#nav_landing {
+#nav_topofpage {
     position: relative;
     float: left;
     cursor: pointer;
     top: 0px;
     height: 50px;
-    width: 224px;
+    width: 235px;
+    z-index: 1100;
+}
+
+#nav_rsvp {
+    position: relative;
+    float: left;
+    cursor: pointer;
+    top: 0px;
+    height: 50px;
+    width: 103px;
+    z-index: 1100;
+}
+
+#nav_photos {
+    position: relative;
+    float: left;
+    cursor: pointer;
+    top: 0px;
+    height: 50px;
+    width: 154px;
+    z-index: 1100;
+}
+
+#nav_contact {
+    position: relative;
+    float: left;
+    cursor: pointer;
+    top: 0px;
+    height: 50px;
+    width: 124px;
     z-index: 1100;
 }
 
@@ -139,8 +167,8 @@ div {
   == About Us ==
 */
 #about-us {
-  height: 853px;
-  background: url("/assets/images/main/02-timeline.jpg") no-repeat scroll center bottom transparent;
+  height: 1111px;
+  background: url("/assets/images/main/02-timeline_08.jpg") no-repeat scroll center bottom transparent;
   background-size: 100% 100%;
 }
 
@@ -165,8 +193,8 @@ div {
 }
 
 #weddingparty-content {
-  height: 1243px;
-  background: url("/assets/images/main/03-party_content.jpg") no-repeat scroll center bottom transparent;
+  height: 1238px;
+  background: url("/assets/images/main/04-profiles.jpg") no-repeat scroll center bottom transparent;
   background-size: 100% 100%;
 }
 
@@ -239,7 +267,7 @@ div {
 /*
   == Photos
 */
-#photo-library {
+#photos {
   height: 536px;
   background: url("/assets/images/main/wu-index_06_photos.png") no-repeat scroll center bottom transparent;
   background-size: 100% 100%;
