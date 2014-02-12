@@ -20,3 +20,9 @@ function loadScript() {
 }
 
 window.onload = loadScript;
+
+$(window).load(function() {
+    $('#slider').nivoSlider({
+      effect: 'fold'
+    });
+});
