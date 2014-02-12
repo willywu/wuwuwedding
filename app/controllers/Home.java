@@ -21,4 +21,8 @@ public class Home extends Controller {
         }
     }
 
+    public static Result photoSection() {
+        return ok(photo_section.render());
+    }
+
 }
