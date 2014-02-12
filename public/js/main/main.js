@@ -23,6 +23,6 @@ window.onload = loadScript;
 
 $(window).load(function() {
     $('#slider').nivoSlider({
-      effect: 'fold'
+      effect: 'fade'
     });
 });

@@ -262,8 +262,12 @@ div {
 /*
   == RSVP ==
 */
-/* TODO */
-
+#rsvp {
+  position: relative;
+  background: url("/assets/images/main/04-profiles_BG_large-no_repeat.jpg") no-repeat scroll center bottom transparent;
+  background-size: 100%;
+  height: 750px;
+}
 /*
   == Photos
 */
@@ -285,4 +289,9 @@ div {
 /*
   == Contact Us ==
 */
-/* TODO */
+#contact-us {
+  position: relative;
+  background: url("/assets/images/main/04-profiles_BG_large-no_repeat.jpg") no-repeat scroll center bottom transparent;
+  background-size: 100%;
+  height: 764px;
+}
