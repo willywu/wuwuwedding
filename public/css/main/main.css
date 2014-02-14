@@ -15,6 +15,7 @@
   == Import fonts ==
 */
 @import url(http://fonts.googleapis.com/css?family=Rokkitt);
+@import url("/assets/fonts/Futura.ttc");
 
 /*
   == Global ==
@@ -167,8 +168,8 @@ div {
   == About Us ==
 */
 #about-us {
-  height: 1111px;
-  background: url("/assets/images/main/02-timeline_08.jpg") no-repeat scroll center bottom transparent;
+  height: 1260px;
+  background: url("/assets/images/main/02-timeline_small.jpg") no-repeat scroll center bottom transparent;
   background-size: 100% 100%;
 }
 
@@ -194,7 +195,7 @@ div {
 
 #weddingparty-content {
   height: 1238px;
-  background: url("/assets/images/main/04-profiles.jpg") no-repeat scroll center bottom transparent;
+  background: url("/assets/images/main/04-profiles_small.jpg") no-repeat scroll center bottom transparent;
   background-size: 100% 100%;
 }
 
@@ -268,22 +269,41 @@ div {
   background-size: 100%;
   height: 750px;
 }
+
+#rsvp-header {
+  position: absolute;
+  background: url("/assets/images/main/06_RSVP-header.png") no-repeat scroll center bottom transparent;
+  width: 317px;
+  height: 52px;
+  left: 341px;
+  top: 30px;
+}
+
 /*
   == Photos
 */
 #photos {
   position: relative;
   background: url("/assets/images/main/05-ceremony_BG.jpg") no-repeat scroll center bottom transparent;
-  background-size: 100% 100%;
-  height: 764px;
+  background-size: 100%;
+  height: 740px;
+}
+
+#photo-header {
+  position: absolute;
+  background: url("/assets/images/main/07_photos.png") no-repeat scroll center bottom transparent;
+  height: 38px;
+  width:121px;
+  top: 30px;
+  left: 440px;
 }
 
 #slider-container {
-  width: 800px;
+  width: 700px;
   position: absolute;
-  height: 600px;
-  top: 75px;
-  left: 100px;
+  height: 525px;
+  top: 105px;
+  left: 150px;
 }
 
 /*
@@ -294,4 +314,13 @@ div {
   background: url("/assets/images/main/04-profiles_BG_large-no_repeat.jpg") no-repeat scroll center bottom transparent;
   background-size: 100%;
   height: 764px;
+}
+
+#contact-us-header {
+  position: absolute;
+  background: url("/assets/images/main/08_contact-header.png") no-repeat scroll center bottom transparent;
+  width: 388px;
+  height: 54px;
+  left: 306px;
+  top: 30px;
 }

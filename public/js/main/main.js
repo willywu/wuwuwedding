@@ -23,10 +23,9 @@ window.onload = loadScript;
 
 $.get('photo_section', function(data) {
     $('#photos').append(data)
-});
-
-$(window).load(function() {
-    $('#slider').nivoSlider({
-      effect: 'fade'
+    $(window).load(function() {
+        $('#slider').nivoSlider({
+          effect: 'fade'
+        });
     });
 });
