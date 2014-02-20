@@ -288,6 +288,12 @@ div {
   top: 100px;
 }
 
+#rsvp-form {
+  width: auto;
+  height: auto;
+  overflow:hidden;
+}
+
 .rsvp-div {
   text-shadow: 0 1px 0 #ffffff;
   background-color: #eeeeee;
@@ -321,6 +327,14 @@ div {
   margin: 0 auto;
   width: 100px;
   display:block;
+}
+
+.rsvp-result {
+  width: 50%;
+  display:block;
+  margin: 0 auto;
+  height: 50px;
+  text-align:center;
 }
 
 /*

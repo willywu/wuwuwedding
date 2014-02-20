@@ -88,9 +88,10 @@
           <div id="rsvp-header"></div>
 
           <div id="rsvp-body">
-            <script type="text/javascript">var rsvpSubmitted=false;</script>
-            <iframe name="hidden_rsvp_iframe" id="hidden_rsvp_iframe" style="display:none;" onload="if(rsvpSubmitted) {window.location=window.location.protocol + '//' + window.location.host + '/submitted';}"></iframe>
-            <form action="https://docs.google.com/forms/d/1pbcIczzYknOfLpZ7_ghqEqjuz-EHO7jTWaA1e4XhXEs/formResponse" method="post"
+            <div id="rsvp-form">
+              <script type="text/javascript">var rsvpSubmitted=false;</script>
+              <iframe name="hidden_rsvp_iframe" id="hidden_rsvp_iframe" style="display:none;" onload="if(rsvpSubmitted) {confirmRsvp();rsvpSubmitted=false;}"></iframe>
+              <form action="https://docs.google.com/forms/d/1pbcIczzYknOfLpZ7_ghqEqjuz-EHO7jTWaA1e4XhXEs/formResponse" method="post"
 target="hidden_rsvp_iframe" onsubmit="rsvpSubmitted=true;">
                 <div class="input-prepend prepend-left">
                     <span class="add-on input-addon">Your Name</span>
@@ -113,7 +114,14 @@ target="hidden_rsvp_iframe" onsubmit="rsvpSubmitted=true;">
                   <textarea class="rsvp-textarea" name="entry.2099597689" placeholder="Songs for our playlist?  Let us know what's on your mind!"></textarea>
                   <button class="btn rsvp-button">Submit</button>
                 </div>
-            </form>
+              </form>
+            </div>
+            <div class="rsvp-result">
+              <div id="rsvp-success" style="display:none;"class="alert alert-success alert-dismissable">
+                <span><b>Success!</b>  We have received your registration!</span>
+                <button type="button" id="rsvp-button" class="close" aria-hidden="true">&times;</button>
+              </div>
+            </div>
           </div>
       </div>
 
