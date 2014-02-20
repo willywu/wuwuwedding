@@ -317,6 +317,12 @@ div {
   margin-top: 10px;
 }
 
+.rsvp-button {
+  margin: 0 auto;
+  width: 100px;
+  display:block;
+}
+
 /*
   == Photos
 */
@@ -366,7 +372,7 @@ div {
 #contact-us-body {
   position: absolute;
   width: 800px;
-  height: 600px;
+  height: 300px;
   left: 100px;
   top: 100px;
 }
@@ -419,4 +425,10 @@ div {
   display:block;
   clear:both;
   margin-top: 10px;
+}
+
+.contact-button {
+  margin: 0 auto;
+  width: 100px;
+  display:block;
 }

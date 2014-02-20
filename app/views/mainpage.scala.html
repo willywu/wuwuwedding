@@ -88,26 +88,30 @@
           <div id="rsvp-header"></div>
 
           <div id="rsvp-body">
-            <form action="/rsvp">
+            <script type="text/javascript">var rsvpSubmitted=false;</script>
+            <iframe name="hidden_rsvp_iframe" id="hidden_rsvp_iframe" style="display:none;" onload="if(rsvpSubmitted) {window.location=window.location.protocol + '//' + window.location.host + '/submitted';}"></iframe>
+            <form action="https://docs.google.com/forms/d/1pbcIczzYknOfLpZ7_ghqEqjuz-EHO7jTWaA1e4XhXEs/formResponse" method="post"
+target="hidden_rsvp_iframe" onsubmit="rsvpSubmitted=true;">
                 <div class="input-prepend prepend-left">
                     <span class="add-on input-addon">Your Name</span>
-                    <input id="rsvp-name" class="input-xlarge input-inline-text" type="text"/>
+                    <input id="rsvp-name" name="entry.1687136101" class="input-xlarge input-inline-text" type="text"/>
                 </div>
                 <div class="input-prepend prepend-right">
                     <span class="add-on input-addon">Email</span>
-                    <input id="rsvp-email" class="input-xlarge input-inline-text" type="email"/>
+                    <input id="rsvp-email" name="entry.1141888948" class="input-xlarge input-inline-text" type="email"/>
                 </div>
                 <div class="input-prepend prepend-left">
                     <span class="add-on input-addon">RSVP Code</span>
-                    <input id="rsvp-code" class="input-xlarge input-inline-text" type="text"/>
+                    <input id="rsvp-code" name="entry.2024289252" class="input-xlarge input-inline-text" type="text"/>
                 </div>
                 <div class="input-prepend prepend-right">
                     <span class="add-on input-addon">Phone Number</span>
-                    <input id="rsvp-phone" class="input-xlarge input-inline-text" type="text"/>
+                    <input id="rsvp-phone" name="entry.1160071086" class="input-xlarge input-inline-text" type="text"/>
                 </div>
                 <div class="rsvp-div">
                   <span class="rsvp-span">Additional Comments</span>
-                  <textarea class="rsvp-textarea" placeholder="Songs for our playlist?  Let us know what's on your mind!"></textarea>
+                  <textarea class="rsvp-textarea" name="entry.2099597689" placeholder="Songs for our playlist?  Let us know what's on your mind!"></textarea>
+                  <button class="btn rsvp-button">Submit</button>
                 </div>
             </form>
           </div>
@@ -125,18 +129,22 @@
           <div id="contact-us-header"></div>
 
           <div id="contact-us-body">
-            <form action="/contactus">
+            <script type="text/javascript">var contactSubmitted=false;</script>
+            <iframe name="hidden_contact_iframe" id="hidden_contact_iframe" style="display:none;" onload="if(contactSubmitted) {window.location=window.location.protocol + '//' + window.location.host + '/submitted';}"></iframe>
+            <form action="https://docs.google.com/forms/d/1JXK3FQ11U9O77FVneTSmX5NN2o60VHdZ9mIT3nmhH7k/formResponse" method="post"
+target="hidden_contact_iframe" onsubmit="contactSubmitted=true;">
                 <div class="input-prepend prepend-left">
                     <span class="add-on input-addon">Your Name</span>
-                    <input id="contact-name" class="input-xlarge input-inline-text" type="text"/>
+                    <input id="contact-name" name="entry.777428967" class="input-xlarge input-inline-text" type="text"/>
                 </div>
                 <div class="input-prepend prepend-right">
                     <span class="add-on input-addon">Email</span>
-                    <input id="contact-email" class="input-xlarge input-inline-text" type="email"/>
+                    <input id="contact-email" name="entry.1273032581" class="input-xlarge input-inline-text" type="email"/>
                 </div>
                 <div class="comments-div">
                   <span class="comments-span">Comments</span>
-                  <textarea class="comments-textarea" placeholder="Share your love or ask us questions!"></textarea>
+                  <textarea class="comments-textarea" name="entry.1200739203" placeholder="Share your love or ask us questions!"></textarea>
+                  <button class="btn contact-button">Submit</button>
                 </div>
             </form>
         </div>
