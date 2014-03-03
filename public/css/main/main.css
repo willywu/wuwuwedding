@@ -222,13 +222,17 @@ div {
 
 #ceremony-content {
   position: relative;
-  height: 764px;
+  height: 900px;
+  width: 1000px;
   background: url("/assets/images/main/05-ceremony_BG.jpg") no-repeat scroll center bottom transparent;
   background-size: 100% 100%;
 }
 
+#ceremony-content-text {
+  margin:20px;
+}
+
 #ticket-img {
-  position: absolute;
   height: 185px;
   background: url("/assets/images/main/05-ceremony_tickets.png") no-repeat scroll center bottom transparent;
   z-index: 100;
@@ -259,6 +263,10 @@ div {
 
 #map-canvas img {
   max-width: none;
+}
+
+.ceremony-h3 {
+  color: #a8a7e1;
 }
 
 /*
