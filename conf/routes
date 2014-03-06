@@ -3,10 +3,10 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Welcome.index()
+GET     /                           controllers.Home.index()
 GET     /register                   controllers.Register.index()
 GET     /submitted                  controllers.RegisterDone.index()
-GET     /home                       controllers.Home.index()
+GET     /home                       controllers.Home.redirect()
 GET     /photo_section              controllers.Home.photoSection()
 
 # Map static resources from the /public folder to the /assets URL path

@@ -472,3 +472,10 @@ div {
   width: 100px;
   display:block;
 }
+
+.contact-footer {
+  position:absolute;
+  top: 400px;
+  width: 100%;
+  text-align: center;
+}

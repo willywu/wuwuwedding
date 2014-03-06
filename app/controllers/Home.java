@@ -21,6 +21,10 @@ public class Home extends Controller {
         }
     }
 
+    public static Result redirect() {
+        return redirect("/");
+    }
+
     public static Result photoSection() {
         return ok(photo_section.render());
     }
