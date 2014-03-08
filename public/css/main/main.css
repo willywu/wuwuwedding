@@ -236,6 +236,7 @@ div {
 
 #ceremony-content-text {
   margin:0px 20px 0px 20px;
+  font-size: 13px;
 }
 
 #ticket-img {
@@ -271,8 +272,12 @@ div {
   max-width: none;
 }
 
-.ceremony-h3 {
+.ceremony-title {
   color: #a8a7e1;
+}
+
+.top-buffer {
+  margin-top: 10px;
 }
 
 #ceremony-footer {
