@@ -235,8 +235,8 @@ div {
 }
 
 #ceremony-content-text {
-  margin:0px 20px 0px 20px;
   font-size: 13px;
+  text-align: justify;
 }
 
 #ticket-img {
@@ -278,6 +278,11 @@ div {
 
 .top-buffer {
   margin-top: 10px;
+}
+
+.col-buffer {
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 #ceremony-footer {
@@ -483,4 +488,6 @@ div {
   top: 400px;
   width: 100%;
   text-align: center;
+  font-family: 'Futura condensed medium', sans-serif;
+  font-size: 13px;
 }
