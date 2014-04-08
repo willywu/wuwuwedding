@@ -157,7 +157,7 @@ div {
 #landing {
   position: relative;
   height: 595px;
-  background: url("/assets/images/main/01-landing.jpg") no-repeat scroll center bottom transparent;
+  background: url("/assets/images/main/01-landing-alt.jpg") no-repeat scroll center bottom transparent;
   z-index: 50;
   background-size: 100% 100%;
 }
@@ -187,7 +187,7 @@ div {
   position: relative;
   z-index: 50;
   height: 642px;
-  background: url("/assets/images/main/03-party.jpg") no-repeat scroll center bottom transparent;
+  background: url("/assets/images/main/03-party-alt.jpg") no-repeat scroll center bottom transparent;
   background-size: 100% 100%;
 }
 
@@ -213,7 +213,7 @@ div {
   position: relative;
   z-index: 50;
   height: 640px;
-  background: url("/assets/images/main/05-ceremony.jpg") no-repeat scroll center bottom transparent;
+  background: url("/assets/images/main/05-ceremony-alt.jpg") no-repeat scroll center bottom transparent;
   background-size: 100% 100%;
 }
 
