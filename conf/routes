@@ -11,3 +11,7 @@ GET     /photo_section              controllers.Home.photoSection()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+POST    /guests/new                  controllers.GuestController.create()
+GET     /guests/delete               controllers.GuestController.delete()
+GET     /guests/all                  controllers.GuestController.index()

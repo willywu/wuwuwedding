@@ -1,0 +1,23 @@
+@(guests: List[Guest])
+
+<html>
+
+<head>
+  <title>Guests</title>
+</head>
+
+<body>
+  <table>
+    <tr><td>Id</td><td>Name</td><td>RSVP code</td></tr>
+    @for(g <- guests) {
+      <tr><td>@g.getId()</td><td>@g.getName()</td><td>@g.getRsvpCode()</td></tr>
+    }
+  </table>
+  <form method="post" action="/guests/new">
+    <span>Name</span><input name="name" type="text"/><br/>
+    <span>RSVP Code</span><input name="rsvpCode" type="text"/><br/>
+    <input type="submit" value="Submit"/>
+  </form>
+</body>
+
+</html>
