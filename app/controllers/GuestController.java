@@ -33,6 +33,11 @@ public class GuestController extends Controller {
         }
     }
 
+    /** Only allow access to the admin pages if the environment variable is set */
+    public static boolean isAdminEnabled() {
+        return System.getenv("WUWUWEDDING_ADMIN") != null;
+    }
+
     /** Get the first parameter with the given name, either from query string or post body */
     public static String getParameter(String paramName) {
         Map<String, String[]> allParams = new HashMap<String, String[]>();
@@ -49,6 +54,9 @@ public class GuestController extends Controller {
     }
 
     public static Result create() {
+        if (!isAdminEnabled()) {
+            return redirect("/");
+        }
         String nameOne = getParameter(GuestField.GUEST_ONE_NAME.getName());
         String nameTwo = getParameter(GuestField.GUEST_TWO_NAME.getName());
         String extraGuest = getParameter(GuestField.HAS_EXTRA_GUEST.getName());
@@ -70,6 +78,9 @@ public class GuestController extends Controller {
     }
 
     public static Result delete() {
+        if (!isAdminEnabled()) {
+            return redirect("/");
+        }
         String id = getParameter(GuestField.ID.getName());
         Guest existingGuest = Guest.find.where().eq(GuestField.ID.getName(), Long.valueOf(id)).findUnique();
         if (existingGuest != null) {
@@ -81,6 +92,9 @@ public class GuestController extends Controller {
     }
 
     public static Result index() {
+        if (!isAdminEnabled()) {
+            return redirect("/");
+        }
         List<Guest> guests = Guest.find.all();
         return ok(guest_all.render(guests));
     }
