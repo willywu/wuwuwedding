@@ -10,6 +10,6 @@ if __name__=="__main__":
     with open(out_filename, 'w') as out_file:
         codes = []
         for i in range(100):
-            codes.append(''.join([random.choice(items) for i in range(5)])) # codes are 8 chars long
+            codes.append(''.join([random.choice(items) for i in range(5)])) # codes are 5 chars long
         codes.sort()
         out_file.write('\n'.join(codes))

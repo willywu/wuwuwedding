@@ -32,9 +32,6 @@ function runPageLoadedScripts() {
     $('#rsvp-error-button').click(function() {
         $('#rsvp-error').fadeOut('slow');
     });
-    $('#one_guest_container').slideUp();
-    $('#two_guests_container').slideUp();
-    $('#extra-rsvp-info-container').slideUp();
     $('#rsvp-check').submit(function(event) {
        var rsvpCodeObj = $('#rsvp-check').serialize();
        $.get('/guests/check_rsvp?'+rsvpCodeObj, function(data) {
@@ -49,19 +46,19 @@ function runPageLoadedScripts() {
                $('#rsvp-email').val(resp.guest.email);
                $('#rsvp-phone').val(resp.guest.phoneNumber);
                $('#rsvp-comment-area').val(resp.guest.comments);
-               $('#rsvp_container').slideUp(400, function() {
+               $('#rsvp_container').slideUp(1000, function() {
                    if (resp.guest.hasExtraGuest) {
-                       $('#two_guests_container').css('display', 'inline');
-                       $('#two_guests_container').slideDown();
+                       $('#two_guests_container').slideDown(250, function() {
+                           $('#extra-rsvp-info-container').slideDown(750);
+                       });
                        $('#rsvp-guest-one-name').val(resp.guest.guestOneName);
                        $('#rsvp-guest-two-name').val(resp.guest.guestTwoName);
                    } else {
-                       $('#one_guest_container').css('display', 'inline');
-                       $('#one_guest_container').slideDown();
+                       $('#one_guest_container').slideDown(250, function() {
+                           $('#extra-rsvp-info-container').slideDown(750);
+                       });
                        $('#rsvp-guest-name').val(resp.guest.guestOneName);
                    }
-                   $('#extra-rsvp-info-container').css('display', 'inline');
-                   $('#extra-rsvp-info-container').slideDown();
                });
            }
        })
