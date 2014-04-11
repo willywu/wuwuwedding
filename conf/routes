@@ -13,5 +13,7 @@ GET     /photo_section              controllers.Home.photoSection()
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
 
 POST    /guests/new                  controllers.GuestController.create()
+GET     /guests/check_rsvp           controllers.GuestController.checkRsvpCode()
+POST    /guests/update_guests        controllers.GuestController.updateGuests()
 GET     /guests/delete               controllers.GuestController.delete()
 GET     /guests/all                  controllers.GuestController.index()

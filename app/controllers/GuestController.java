@@ -4,8 +4,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.codehaus.jackson.node.ObjectNode;
+
 import models.Guest;
 
+import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
 import views.html.guest_all;
@@ -14,11 +17,13 @@ public class GuestController extends Controller {
 
     public enum GuestField {
         ID("id"),
-        GUEST_ONE_NAME("guestOneName"),
-        GUEST_TWO_NAME("guestTwoName"),
+        GUEST_ONE_NAME_SINGLE("guestOneNameSingle"),
+        GUEST_ONE_NAME_DOUBLE("guestOneNameDouble"),
+        GUEST_TWO_NAME_DOUBLE("guestTwoNameDouble"),
         HAS_EXTRA_GUEST("hasExtraGuest"),
         RSVP_CODE("rsvpCode"),
         PHONE_NUMBER("phoneNumber"),
+        EMAIL("email"),
         COMMENTS("comments");
 
         /** the name of the param in HTTP calls, and also the name of the field in the Model */
@@ -57,8 +62,8 @@ public class GuestController extends Controller {
         if (!isAdminEnabled()) {
             return redirect("/");
         }
-        String nameOne = getParameter(GuestField.GUEST_ONE_NAME.getName());
-        String nameTwo = getParameter(GuestField.GUEST_TWO_NAME.getName());
+        String nameOne = getParameter(GuestField.GUEST_ONE_NAME_DOUBLE.getName());
+        String nameTwo = getParameter(GuestField.GUEST_TWO_NAME_DOUBLE.getName());
         String extraGuest = getParameter(GuestField.HAS_EXTRA_GUEST.getName());
         String rsvpCode = getParameter(GuestField.RSVP_CODE.getName());
         if (nameOne == null || rsvpCode == null) {
@@ -97,6 +102,50 @@ public class GuestController extends Controller {
         }
         List<Guest> guests = Guest.find.all();
         return ok(guest_all.render(guests));
+    }
+
+    public static Result checkRsvpCode() {
+        String rsvpCode = getParameter(GuestField.RSVP_CODE.getName());
+        Guest existingGuest = Guest.find.where().eq(GuestField.RSVP_CODE.name().toLowerCase(), rsvpCode).findUnique();
+        ObjectNode result = Json.newObject();
+        if (existingGuest == null) {
+            result.put("status", "bad");
+            result.put("guest", "null");
+            return ok(result);
+        } else {
+            result.put("status", "good");
+            result.put("guest", Json.toJson(existingGuest));
+            return ok(result);
+        }
+    }
+
+    public static Result updateGuests() {
+        ObjectNode result = Json.newObject();
+        String rsvpCode = getParameter(GuestField.RSVP_CODE.getName());
+        Guest existingGuest = Guest.find.where().eq(GuestField.RSVP_CODE.name().toLowerCase(), rsvpCode).findUnique();
+        if (existingGuest == null) {
+            result.put("status", "bad");
+            return ok(result);
+        }
+
+        String guestOne;
+        String guestTwo;
+        if (existingGuest.getHasExtraGuest()) {
+            guestOne = getParameter(GuestField.GUEST_ONE_NAME_DOUBLE.getName());
+            guestTwo = getParameter(GuestField.GUEST_TWO_NAME_DOUBLE.getName());
+        } else {
+            guestOne = getParameter(GuestField.GUEST_ONE_NAME_SINGLE.getName());
+            guestTwo = null;
+        }
+        existingGuest.setGuestOneName(guestOne);
+        existingGuest.setGuestTwoName(guestTwo);
+        existingGuest.setEmail(getParameter(GuestField.EMAIL.getName()));
+        existingGuest.setComments(getParameter(GuestField.COMMENTS.getName()));
+        existingGuest.setPhoneNumber(getParameter(GuestField.PHONE_NUMBER.getName()));
+        existingGuest.save();
+
+        result.put("status", "good");
+        return ok(result);
     }
 
 }

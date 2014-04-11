@@ -1,3 +1,4 @@
+@import controllers.GuestController.GuestField
 
 <!DOCTYPE html>
 <html lang="en">
@@ -120,7 +121,7 @@
             <img src="/assets/images/main/05-ceremony_heart.png"/>
           </div>
           <div class="row center-row">
-            <span class="ceremony-instagram">Don't forget to use our Instagram hashtag!</span>
+            <span class="ceremony-instagram-font">Don't forget to use our Instagram hashtag!</span>
           </div>
           <div class="row center-row">
             <img src="/assets/images/main/05-ceremony_instagram.png"/>
@@ -136,36 +137,63 @@
           <div id="rsvp-body">
             <div id="rsvp-form">
               <script type="text/javascript">var rsvpSubmitted=false;</script>
-              <iframe name="hidden_rsvp_iframe" id="hidden_rsvp_iframe" style="display:none;" onload="if(rsvpSubmitted) {confirmRsvp();rsvpSubmitted=false;}"></iframe>
-              <form action="https://docs.google.com/forms/d/1pbcIczzYknOfLpZ7_ghqEqjuz-EHO7jTWaA1e4XhXEs/formResponse" method="post"
-target="hidden_rsvp_iframe" onsubmit="rsvpSubmitted=true;">
-                <div class="input-prepend prepend-left">
-                    <span class="add-on input-addon">Your Name</span>
-                    <input id="rsvp-name" name="entry.1687136101" class="input-xlarge input-inline-text" type="text"/>
+              <form id="rsvp-check">
+                <div id="rsvp_container" style="display:inline">
+                  <div class="input-prepend prepend-center">
+                      <span class="add-on input-addon">RSVP Code</span>
+                      <input id="rsvp-code" name="@GuestField.RSVP_CODE.getName()" class="input-xlarge input-inline-text" type="text"/>
+                  </div>
+                  <div class="row center-row">
+                    <span class="ceremony-instagram-font">Please enter your code to RSVP!</span>
+                  </div>
+                  <button class="btn rsvp-code-button">Submit</button>
+                  <div class="rsvp-result">
+                    <div id="rsvp-error" style="display:none;"class="alert alert-danger alert-dismissable">
+                      <span><b>Sorry!</b>  You entered an invalid RSVP code!</span>
+                      <button type="button" id="rsvp-error-button" class="close" aria-hidden="true">&times;</button>
+                    </div>
+                  </div>
                 </div>
-                <div class="input-prepend prepend-right">
-                    <span class="add-on input-addon">Email</span>
-                    <input id="rsvp-email" name="entry.1141888948" class="input-xlarge input-inline-text" type="email"/>
+              </form>
+              <form id="rsvp-update-guests">
+                <input type="hidden" name="rsvpCode" id="hidden-rsvp-code"/>
+                <div id="one_guest_container" style="display:none">
+                  <div class="input-prepend prepend-center">
+                      <span class="add-on input-addon">Your Name</span>
+                      <input id="rsvp-guest-name" name="@GuestField.GUEST_ONE_NAME_SINGLE.getName()" class="input-xlarge input-inline-text" type="text"/>
+                  </div>
                 </div>
-                <div class="input-prepend prepend-left">
-                    <span class="add-on input-addon">RSVP Code</span>
-                    <input id="rsvp-code" name="entry.2024289252" class="input-xlarge input-inline-text" type="text"/>
+                <div id="two_guests_container" style="display:none">
+                  <div class="input-prepend prepend-left">
+                      <span class="add-on input-addon">Guest #1 Name</span>
+                      <input id="rsvp-guest-one-name" name="@GuestField.GUEST_ONE_NAME_DOUBLE.getName()" class="input-xlarge input-inline-text" type="text"/>
+                  </div>
+                  <div class="input-prepend prepend-right">
+                      <span class="add-on input-addon">Guest #2 Name</span>
+                      <input id="rsvp-guest-two-name" name="@GuestField.GUEST_TWO_NAME_DOUBLE.getName()" class="input-xlarge input-inline-text" type="text"/>
+                  </div>
                 </div>
-                <div class="input-prepend prepend-right">
-                    <span class="add-on input-addon">Phone Number</span>
-                    <input id="rsvp-phone" name="entry.1160071086" class="input-xlarge input-inline-text" type="text"/>
-                </div>
-                <div class="rsvp-div">
-                  <span class="rsvp-span">Additional Comments</span>
-                  <textarea class="rsvp-textarea" name="entry.2099597689" placeholder="Songs for our playlist?  Let us know what's on your mind!"></textarea>
-                  <button class="btn rsvp-button">Submit</button>
+                <div id="extra-rsvp-info-container" style="display:none">
+                  <div class="input-prepend prepend-left">
+                      <span class="add-on input-addon">Email</span>
+                      <input id="rsvp-email" name="@GuestField.EMAIL.getName()" class="input-xlarge input-inline-text" type="email"/>
+                  </div>
+                  <div class="input-prepend prepend-right">
+                      <span class="add-on input-addon">Phone Number</span>
+                      <input id="rsvp-phone" name="@GuestField.PHONE_NUMBER.getName()" class="input-xlarge input-inline-text" type="text"/>
+                  </div>
+                  <div class="rsvp-div">
+                    <span class="rsvp-span">Additional Comments</span>
+                    <textarea id="rsvp-comment-area" class="rsvp-textarea" name="@GuestField.COMMENTS.getName()" placeholder="Songs for our playlist?  Let us know what's on your mind!"></textarea>
+                    <button class="btn rsvp-button">Submit</button>
+                  </div>
                 </div>
               </form>
             </div>
             <div class="rsvp-result">
               <div id="rsvp-success" style="display:none;"class="alert alert-success alert-dismissable">
-                <span><b>Success!</b>  We have received your registration!</span>
-                <button type="button" id="rsvp-button" class="close" aria-hidden="true">&times;</button>
+                <span><b>Congratulations!</b>  You are now confirmed for our wedding!</span>
+                <button type="button" id="rsvp-success-button" class="close" aria-hidden="true">&times;</button>
               </div>
             </div>
           </div>

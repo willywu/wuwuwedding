@@ -18,7 +18,8 @@ border: 1px solid black;
 <body>
 
   <table>
-    <tr><td>Id</td><td>Guest #1 Name</td><td>Guest #2 Name</td><td>Has extra guest</td><td>RSVP code</td><td>Delete?</td></tr>
+    <tr><td>Id</td><td>Guest #1 Name</td><td>Guest #2 Name</td><td>Has extra guest</td><td>RSVP code</td>
+    <td>Email</td><td>Phone</td><td>Comments</td><td>Delete?</td></tr>
     @for(g <- guests) {
       <tr>
         <td>@g.getId()</td>
@@ -26,6 +27,9 @@ border: 1px solid black;
         <td>@g.getGuestTwoName()</td>
         <td>@g.getHasExtraGuest()</td>
         <td>@g.getRsvpCode()</td>
+        <td>@g.getEmail()</td>
+        <td>@g.getPhoneNumber()</td>
+        <td>@g.getComments()</td>
         <td><a href="/guests/delete?id=@g.getId()">delete</a></td>
       </tr>
     }
@@ -33,8 +37,8 @@ border: 1px solid black;
   <br/><br/>
   <form method="post" action="/guests/new">
     <table>
-      <tr><td>Guest One Name</td><td><input name="@GuestField.GUEST_ONE_NAME.getName()" type="text"/></td></tr>
-      <tr><td>Guest Two Name</td><td><input name="@GuestField.GUEST_TWO_NAME.getName()" type="text"/></td></tr>
+      <tr><td>Guest One Name</td><td><input name="@GuestField.GUEST_ONE_NAME_DOUBLE.getName()" type="text"/></td></tr>
+      <tr><td>Guest Two Name</td><td><input name="@GuestField.GUEST_TWO_NAME_DOUBLE.getName()" type="text"/></td></tr>
       <tr><td>Has extra guest</td><td><input name="@GuestField.HAS_EXTRA_GUEST.getName()" type="text"/></td></tr>
       <tr><td>RSVP Code</td><td><input name="@GuestField.RSVP_CODE.getName()" type="text"/></td></tr>
     </table>

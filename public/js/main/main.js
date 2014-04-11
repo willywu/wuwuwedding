@@ -26,9 +26,59 @@ function confirmRsvp() {
 
 function runPageLoadedScripts() {
     //loadMapScript();
-    $('#rsvp-button').click(function() {
+    $('#rsvp-success-button').click(function() {
         $('#rsvp-success').fadeOut('slow');
     });
+    $('#rsvp-error-button').click(function() {
+        $('#rsvp-error').fadeOut('slow');
+    });
+    $('#one_guest_container').slideUp();
+    $('#two_guests_container').slideUp();
+    $('#extra-rsvp-info-container').slideUp();
+    $('#rsvp-check').submit(function(event) {
+       var rsvpCodeObj = $('#rsvp-check').serialize();
+       $.get('/guests/check_rsvp?'+rsvpCodeObj, function(data) {
+           resp = eval(data)
+           if (resp.status==='bad') {
+               $('#rsvp-error').fadeIn('slow');
+           } else {
+               $('#rsvp').animate({
+                   height:'460px'
+               });
+               $('#hidden-rsvp-code').val(resp.guest.rsvpCode);
+               $('#rsvp-email').val(resp.guest.email);
+               $('#rsvp-phone').val(resp.guest.phoneNumber);
+               $('#rsvp-comment-area').val(resp.guest.comments);
+               $('#rsvp_container').slideUp(400, function() {
+                   if (resp.guest.hasExtraGuest) {
+                       $('#two_guests_container').css('display', 'inline');
+                       $('#two_guests_container').slideDown();
+                       $('#rsvp-guest-one-name').val(resp.guest.guestOneName);
+                       $('#rsvp-guest-two-name').val(resp.guest.guestTwoName);
+                   } else {
+                       $('#one_guest_container').css('display', 'inline');
+                       $('#one_guest_container').slideDown();
+                       $('#rsvp-guest-name').val(resp.guest.guestOneName);
+                   }
+                   $('#extra-rsvp-info-container').css('display', 'inline');
+                   $('#extra-rsvp-info-container').slideDown();
+               });
+           }
+       })
+       return false;
+    });
+    $('#rsvp-update-guests').submit(function(event) {
+        var rsvpGuestsObj = $('#rsvp-update-guests').serialize();
+        $.post('/guests/update_guests', rsvpGuestsObj, function(data) {
+            resp = eval(data)
+            if (resp.status==='good') {
+                confirmRsvp();
+            } else {
+                alert("Something unexpected happened.  Please try again.");
+            }
+        })
+        return false;
+     });
 }
 
 window.onload = runPageLoadedScripts;
