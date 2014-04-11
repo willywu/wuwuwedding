@@ -5,8 +5,8 @@ HOST = "http://localhost:9000"
 VOTE_PATH = "/guests/new"
 
 def open_url_via_httplib(guest_one, guest_two, has_extra_guest, rsvp_code):
-    post_data = {"guestOneName": guest_one,
-                 "guestTwoName": guest_two,
+    post_data = {"guestOneNameDouble": guest_one,
+                 "guestTwoNameDouble": guest_two,
                  "hasExtraGuest": has_extra_guest,
                  "rsvpCode": rsvp_code}
     encoded_data = urllib.urlencode(post_data)
@@ -36,4 +36,4 @@ if __name__=="__main__":
     in_filename = "guests.csv"
     with open(in_filename, 'r') as in_file:
         for line in in_file:
-            insert_guest(line)
+            insert_guest(line.strip())
