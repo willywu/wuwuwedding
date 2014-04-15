@@ -12,6 +12,8 @@ create table guest (
   email                     varchar(255),
   phone_number              varchar(255),
   comments                  varchar(255),
+  attending                 boolean,
+  modified_date             timestamp,
   constraint pk_guest primary key (id))
 ;
 
