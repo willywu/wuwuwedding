@@ -19,7 +19,7 @@ border: 1px solid black;
 
   <table>
     <tr><td>Id</td><td>Guest #1 Name</td><td>Guest #2 Name</td><td>Has extra guest</td><td>RSVP code</td>
-    <td>Email</td><td>Phone</td><td>Comments</td><td>Delete?</td></tr>
+    <td>Attending?</td><td>Email</td><td>Phone</td><td>Comments</td><td>Last Modified</td><td>Delete?</td></tr>
     @for(g <- guests) {
       <tr>
         <td>@g.getId()</td>
@@ -27,9 +27,11 @@ border: 1px solid black;
         <td>@g.getGuestTwoName()</td>
         <td>@g.getHasExtraGuest()</td>
         <td>@g.getRsvpCode()</td>
+        <td>@g.getAttending()</td>
         <td>@g.getEmail()</td>
         <td>@g.getPhoneNumber()</td>
         <td>@g.getComments()</td>
+        <td>@g.getModifiedDate()</td>
         <td><a href="/guests/delete?id=@g.getId()">delete</a></td>
       </tr>
     }

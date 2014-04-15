@@ -1,5 +1,7 @@
 package controllers;
 
+import java.util.Collections;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -24,6 +26,7 @@ public class GuestController extends Controller {
         RSVP_CODE("rsvpCode"),
         PHONE_NUMBER("phoneNumber"),
         EMAIL("email"),
+        ATTENDING("attending"),
         COMMENTS("comments");
 
         /** the name of the param in HTTP calls, and also the name of the field in the Model */
@@ -58,6 +61,12 @@ public class GuestController extends Controller {
         }
     }
 
+    /** Get the accept/decline radio parameter */
+    public static Boolean getAcceptStatus() {
+        String accept = getParameter(GuestField.ATTENDING.getName());
+        return accept.equals("accept");
+    }
+
     public static Result create() {
         if (!isAdminEnabled()) {
             return redirect("/");
@@ -78,6 +87,8 @@ public class GuestController extends Controller {
         g.setGuestTwoName(nameTwo);
         g.setHasExtraGuest(Boolean.valueOf(extraGuest));
         g.setRsvpCode(rsvpCode);
+        g.setAttending(true);
+        g.setModifiedDate(new Date());
         g.save();
         return redirect("/guests/all");
     }
@@ -101,6 +112,7 @@ public class GuestController extends Controller {
             return redirect("/");
         }
         List<Guest> guests = Guest.find.all();
+        Collections.sort(guests);
         return ok(guest_all.render(guests));
     }
 
@@ -140,8 +152,10 @@ public class GuestController extends Controller {
         existingGuest.setGuestOneName(guestOne);
         existingGuest.setGuestTwoName(guestTwo);
         existingGuest.setEmail(getParameter(GuestField.EMAIL.getName()));
+        existingGuest.setAttending(getAcceptStatus());
         existingGuest.setComments(getParameter(GuestField.COMMENTS.getName()));
         existingGuest.setPhoneNumber(getParameter(GuestField.PHONE_NUMBER.getName()));
+        existingGuest.setModifiedDate(new Date());
         existingGuest.save();
 
         result.put("status", "good");

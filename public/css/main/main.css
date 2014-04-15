@@ -383,6 +383,14 @@ form {
   text-align:center;
 }
 
+label.btn {
+  margin: 0px 150px;
+  -webkit-border-radius: 4px 4px 4px 4px !important;
+  -moz-border-radius: 4px 4px 4px 4px !important;
+  border-radius: 4px 4px 4px 4px !important;
+  color: #7d7d7d !important;
+}
+
 /*
   == Photos
 */

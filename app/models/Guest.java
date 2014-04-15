@@ -1,13 +1,16 @@
 package models;
 
+import java.util.Date;
+
 import javax.persistence.*;
 
 import com.avaje.ebean.validation.ValidatorMeta;
 
+import play.data.format.Formats;
 import play.db.ebean.*;
 
 @Entity
-public class Guest extends Model {
+public class Guest extends Model implements Comparable<Guest> {
 
     @Id
     public Long id;
@@ -25,6 +28,11 @@ public class Guest extends Model {
     public String phoneNumber;
 
     public String comments;
+
+    public Boolean attending;
+
+    @Formats.DateTime(pattern="MM/dd/yyyy")
+    public Date modifiedDate = new Date();
 
     public static Finder<Long,Guest> find = new Finder<Long,Guest>(Long.class, Guest.class);
 
@@ -90,6 +98,27 @@ public class Guest extends Model {
 
     public void setComments(String comments) {
         this.comments = comments;
+    }
+
+    public Boolean getAttending() {
+        return attending;
+    }
+
+    public void setAttending(Boolean attending) {
+        this.attending = attending;
+    }
+
+    public Date getModifiedDate() {
+        return modifiedDate;
+    }
+
+    public void setModifiedDate(Date modifiedDate) {
+        this.modifiedDate = modifiedDate;
+    }
+
+    @Override
+    public int compareTo(Guest otherGuest) {
+        return this.guestOneName.compareTo(otherGuest.guestOneName);
     }
 
 }

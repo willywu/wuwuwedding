@@ -45,6 +45,11 @@ function runPageLoadedScripts() {
                $('#hidden-rsvp-code').val(resp.guest.rsvpCode);
                $('#rsvp-email').val(resp.guest.email);
                $('#rsvp-phone').val(resp.guest.phoneNumber);
+               if (resp.guest.attending) {
+                   $('#rsvp-accept').prop("checked", true);
+               } else {
+                   $('#rsvp-decline').prop("checked", true);
+               }
                $('#rsvp-comment-area').val(resp.guest.comments);
                $('#rsvp_container').slideUp(1000, function() {
                    if (resp.guest.hasExtraGuest) {
