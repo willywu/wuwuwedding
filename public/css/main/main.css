@@ -233,7 +233,7 @@ form {
 
 #ceremony-content {
   position: relative;
-  height: 950px;
+  height: 1100px;
   width: 1000px;
   background: url("/assets/images/main/05-ceremony_BG.jpg") no-repeat scroll center bottom transparent;
   background-size: 100% 100%;
@@ -389,6 +389,11 @@ label.btn {
   -moz-border-radius: 4px 4px 4px 4px !important;
   border-radius: 4px 4px 4px 4px !important;
   color: #7d7d7d !important;
+}
+
+.rsvp-registry {
+  margin-left:190px;
+  text-align:center;
 }
 
 /*
