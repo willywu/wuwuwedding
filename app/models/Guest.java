@@ -118,7 +118,7 @@ public class Guest extends Model implements Comparable<Guest> {
 
     @Override
     public int compareTo(Guest otherGuest) {
-        return this.guestOneName.compareTo(otherGuest.guestOneName);
+        return otherGuest.modifiedDate.compareTo(this.modifiedDate);
     }
 
 }

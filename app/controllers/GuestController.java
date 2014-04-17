@@ -10,12 +10,15 @@ import org.codehaus.jackson.node.ObjectNode;
 
 import models.Guest;
 
+import play.Logger.ALogger;
 import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
 import views.html.guest_all;
 
 public class GuestController extends Controller {
+
+    private static final ALogger LOGGER = play.Logger.of(GuestController.class.getName());
 
     public enum GuestField {
         ID("id"),
@@ -43,7 +46,13 @@ public class GuestController extends Controller {
 
     /** Only allow access to the admin pages if the environment variable is set */
     public static boolean isAdminEnabled() {
-        return System.getenv("WUWUWEDDING_ADMIN") != null;
+        String password = getParameter("password");
+        boolean shouldAccess = password != null && password.equals(System.getenv("WUWUWEDDING_ADMIN"));
+        LOGGER.debug(String.format("Request from %s entered %s as password for URL %s",
+                request().remoteAddress(),
+                password,
+                request().path()));
+        return shouldAccess;
     }
 
     /** Get the first parameter with the given name, either from query string or post body */
@@ -118,7 +127,7 @@ public class GuestController extends Controller {
 
     public static Result checkRsvpCode() {
         String rsvpCode = getParameter(GuestField.RSVP_CODE.getName());
-        Guest existingGuest = Guest.find.where().eq(GuestField.RSVP_CODE.name().toLowerCase(), rsvpCode).findUnique();
+        Guest existingGuest = Guest.find.where().eq(GuestField.RSVP_CODE.name().toLowerCase(), rsvpCode.toUpperCase()).findUnique();
         ObjectNode result = Json.newObject();
         if (existingGuest == null) {
             result.put("status", "bad");
