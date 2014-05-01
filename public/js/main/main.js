@@ -53,13 +53,13 @@ function runPageLoadedScripts() {
                $('#rsvp-comment-area').val(resp.guest.comments);
                $('#rsvp_container').slideUp(1000, function() {
                    if (resp.guest.hasExtraGuest) {
-                       $('#two_guests_container').slideDown(250, function() {
+                       $('#two_guests_container').slideDown(400, function() {
                            $('#extra-rsvp-info-container').slideDown(750);
                        });
                        $('#rsvp-guest-one-name').val(resp.guest.guestOneName);
                        $('#rsvp-guest-two-name').val(resp.guest.guestTwoName);
                    } else {
-                       $('#one_guest_container').slideDown(250, function() {
+                       $('#one_guest_container').slideDown(400, function() {
                            $('#extra-rsvp-info-container').slideDown(750);
                        });
                        $('#rsvp-guest-name').val(resp.guest.guestOneName);

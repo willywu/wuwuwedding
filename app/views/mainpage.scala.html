@@ -165,12 +165,18 @@
               <form id="rsvp-update-guests">
                 <input type="hidden" name="rsvpCode" id="hidden-rsvp-code"/>
                 <div id="one_guest_container" style="display:none">
+                  <div class="row center-row">
+                    <span class="ceremony-instagram-font">We have reserved 1 seat in your honor!</span>
+                  </div>
                   <div class="input-prepend prepend-center">
                       <span class="add-on input-addon">Your Name</span>
                       <input id="rsvp-guest-name" name="@GuestField.GUEST_ONE_NAME_SINGLE.getName()" class="input-xlarge input-inline-text" type="text"/>
                   </div>
                 </div>
                 <div id="two_guests_container" style="display:none">
+                  <div class="row center-row">
+                    <span class="ceremony-instagram-font">We have reserved 2 seats in your honor!</span>
+                  </div>
                   <div class="input-prepend prepend-left">
                       <span class="add-on input-addon">Guest #1 Name</span>
                       <input id="rsvp-guest-one-name" name="@GuestField.GUEST_ONE_NAME_DOUBLE.getName()" class="input-xlarge input-inline-text" type="text"/>
