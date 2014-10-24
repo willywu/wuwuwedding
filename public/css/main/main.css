@@ -469,6 +469,10 @@ label.btn {
   margin: 10px;
 }
 
+.prepend-radios {
+  margin-top: 10px;
+}
+
 .input-prepend .input-addon {
   width: 100px;
 }
